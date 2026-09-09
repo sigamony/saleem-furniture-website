@@ -16,6 +16,18 @@ export default function Header() {
     setDropdownOpen(false);
   }, [pathname]);
 
+  // Prevent background scrolling when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
   const navItems = [
     { label: "Home", href: "/" },
     { label: "Collections", href: "/collections" },
@@ -26,7 +38,7 @@ export default function Header() {
   ];
 
   return (
-    <>
+    <header className="site-header">
       <div className="announcement-bar">CUSTOM MADE FURNITURE | LIMITED MONTHLY ORDERS</div>
       <nav className="navbar">
         <div className="container header-container">
@@ -159,6 +171,6 @@ export default function Header() {
           </ul>
         </div>
       </nav>
-    </>
+    </header>
   );
 }
