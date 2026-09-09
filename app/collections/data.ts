@@ -56,7 +56,6 @@ export const collectionsData: Record<string, Category> = {
             description: "A large modular sectional designed to act as a soft partition between the dining and living spaces. Built with modular blocks that can be separated or linked via hidden brass brackets.",
             dimensions: "W 340cm x D 220cm x H 72cm",
             materials: ["Solid Ash Frame", "Sand-toned Bouclé Fabric", "Custom Brass Accent Legs"],
-            options: [],
             features: ["Interlocking modular connection system", "Raised frame height for robot-vacuum clearance"],
             image: "/whole-room.png"
           },
